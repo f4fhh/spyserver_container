@@ -25,7 +25,7 @@ sed -i "s/fft_bin_bits.*/fft_bin_bits = ${FFT_BIN_BITS:=16}/g" $CONFIG
 #sed -i "s/#maximum_frequency.*/maximum_frequency = ${MAXIMUM_FREQUENCY:=35000000}/g" $CONFIG
 sed -i "s/#initial_gain.*/initial_gain = ${INITIAL_GAIN:=5}/g" $CONFIG
 sed -i "s/#rtl_sampling_mode.*/rtl_sampling_mode = ${RTL_SAMPLING_MODE:=0}/g" $CONFIG
-#sed -i "s/#converter_offset.*/converter_offset = ${CONVERTER_OFFSET:=-120000000}/g" $CONFIG
+sed -i "s/#converter_offset.*/converter_offset = ${CONVERTER_OFFSET:=0}/g" $CONFIG
 sed -i "s/#enable_bias_tee.*/enable_bias_tee = ${ENABLE_BIAS_TEE:=0}/g" $CONFIG
 sed -i "s/buffer_size_ms.*/buffer_size_ms = ${BUFFER_SIZE_MS:=50}/g" $CONFIG
 sed -i "s/buffer_count.*/buffer_count = ${BUFFER_COUNT:=10}/g" $CONFIG
