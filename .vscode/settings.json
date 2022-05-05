@@ -1,0 +1,13 @@
+{
+    "docker.commands.runInteractive": [
+        {
+            "label": "Default run command",
+            "template": "${config:docker.dockerPath} run --rm -it ${exposedPorts} ${tag}"
+        },
+        {
+            "label": "Run Spyserver containers",
+            "template": "${config:docker.dockerPath} run --rm --device /dev/bus/usb -p 5555:5555 -e \"LIST_IN_DIRECTORY=0\" -it ${exposedPorts} ${tag}",
+            "match": "spyserver"
+        }
+    ]
+}
