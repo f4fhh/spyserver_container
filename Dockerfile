@@ -27,3 +27,4 @@ RUN mv spyserver /usr/bin && \
 COPY entrypoint.sh .
 RUN chmod +x ./entrypoint.sh
 ENTRYPOINT ["./entrypoint.sh"]
+ 
