@@ -1,7 +1,7 @@
-FROM debian:bullseye-slim
+FROM debian:bookworm-slim
 
 ARG TARGETPLATFORM
-ENV TARGETPLATFORM "$TARGETPLATFORM"
+ENV TARGETPLATFORM=${TARGETPLATFORM}
 
 RUN apt-get update && apt-get install -y rtl-sdr librtlsdr-dev wget libairspy0 libairspyhf1 libairspy-dev libairspyhf-dev
 
@@ -20,7 +20,7 @@ RUN set -ex; \
     rm spyserver-arm32.tgz;\
   fi;
 
-RUN mv spyserver spyserver_ping /usr/bin && \
+RUN mv spyserver /usr/bin && \
   mkdir -p /etc/spyserver && \
   mv spyserver.config /etc/spyserver
 

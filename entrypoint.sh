@@ -30,5 +30,5 @@ sed -i "s/#converter_offset.*/converter_offset = ${CONVERTER_OFFSET:=0}/g" $CONF
 sed -i "s/#enable_bias_tee.*/enable_bias_tee = ${ENABLE_BIAS_TEE:=0}/g" $CONFIG
 sed -i "s/buffer_size_ms.*/buffer_size_ms = ${BUFFER_SIZE_MS:=50}/g" $CONFIG
 sed -i "s/buffer_count.*/buffer_count = ${BUFFER_COUNT:=10}/g" $CONFIG
-
+sleep 10
 exec spyserver $CONFIG
